@@ -29,17 +29,31 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color) !important;
 }
 
+.navbar-logo {
+    max-height:160px;
+    height: auto;
+    width: auto;
+    margin-left: -70px;
+}
+
+.footer-logo {
+    max-height: 200px;
+    height: auto;
+    width: auto;
+    filter: brightness(0.9);
+}
+
 .logo-initial {
-    width: 40px;
+    width: 50px;
     height: 40px;
     background-color: var(--primary-color);
     color: white;
-    border-radius: 50%;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 14px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -89,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-image-frame {
     height: 550px;
     border-radius: 10px;
-    background: url('../img/izandra-foto.jpg') center/cover no-repeat;
+    background: url('../img/barros-farias.jpg') center/cover no-repeat;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     overflow: hidden;
 }
@@ -256,6 +270,11 @@ h1, h2, h3, h4, h5, h6 {
 
 section {
     padding: 5rem 0;
+}
+
+#sobre p, #marcia p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 section h2 {
