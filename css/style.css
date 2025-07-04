@@ -1,13 +1,12 @@
 :root {
-    --primary-color: #1a1a1a; /* Preto */
-    --secondary-color: #333333; /* Cinza escuro */
-    --accent-color: #666666; /* Cinza médio */
-    --light-accent: #999999; /* Cinza claro */
+    --primary-color: #1a1a1a;
+    --secondary-color: #333333;
+    --accent-color: #666666;
+    --light-accent: #999999;
     --text-color: #333;
     --light-bg: #f8f9fa;
 }
 
-/* Tipografia */
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
@@ -19,7 +18,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-/* Navbar */
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 1rem 0;
@@ -60,12 +58,10 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* Top bar */
 .top-bar {
     background-color: var(--primary-color) !important;
 }
 
-/* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/hero-bg.jpg');
     background-size: cover;
@@ -93,11 +89,10 @@ h1, h2, h3, h4, h5, h6 {
 .hero-image-frame {
     height: 550px;
     border-radius: 10px;
-    background: url('../img/advogada-hero.jpg') center/cover no-repeat;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
 }
 
-/* Botões */
 .btn-danger {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -133,7 +128,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
 }
 
-/* Cards */
 .card {
     border: none;
     border-radius: 8px;
@@ -189,13 +183,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-/* Section Intro */
 .section-intro .subtitle {
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
 
-/* Estatísticas Section */
 .escritorio-section {
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/escritorio-bg.jpg');
     background-size: cover;
@@ -225,7 +217,6 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-/* About Section */
 .about-image {
     position: relative;
 }
@@ -262,7 +253,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.8rem;
 }
 
-/* Seções */
 section {
     padding: 5rem 0;
 }
@@ -276,7 +266,6 @@ section h2 {
     color: var(--primary-color) !important;
 }
 
-/* Ratings */
 .ratings {
     transition: transform 0.3s ease;
 }
@@ -289,7 +278,6 @@ section h2 {
     color: var(--accent-color);
 }
 
-/* Formulário de Contato */
 .form-control {
     padding: 0.8rem;
     border: 1px solid #ddd;
@@ -302,7 +290,6 @@ section h2 {
     box-shadow: 0 0 0 0.2rem rgba(102, 102, 102, 0.25);
 }
 
-/* WhatsApp Float Button */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -320,15 +307,16 @@ section h2 {
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 1000;
+    text-decoration: none;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
     color: white;
     background-color: #333;
+    text-decoration: none;
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-color);
 }
@@ -350,7 +338,6 @@ footer a:hover {
     opacity: 0.8;
 }
 
-/* Animações */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -366,7 +353,6 @@ footer a:hover {
     animation: fadeIn 1s ease-out;
 }
 
-/* Responsividade */
 @media (max-width: 992px) {
     .navbar-nav {
         padding: 1rem 0;
@@ -399,6 +385,7 @@ footer a:hover {
         font-size: 25px;
         bottom: 20px;
         right: 20px;
+        text-decoration: none;
     }
     
     .stat-box {
@@ -411,7 +398,6 @@ footer a:hover {
     }
 }
 
-/* Seção de Contato Harmonizada */
 #contato .contact-info {
     background: #fff;
     border-radius: 18px;
@@ -488,4 +474,4 @@ footer a:hover {
     #contato .contact-info {
         padding: 1.5rem 0.5rem 1.5rem 0.5rem;
     }
-} 
+}

@@ -1,10 +1,8 @@
-// Adiciona classe fade-in aos elementos quando eles entram na viewport
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Adiciona classe de ativo ao link atual no menu
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
     
-    // Função para adicionar classe ativa ao link correspondente à seção atual
     function highlightActiveSection() {
         const scrollY = window.pageYOffset;
         
@@ -26,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', highlightActiveSection);
     
-    // Adiciona efeito de fade para os elementos quando eles aparecem na viewport
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -37,10 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.1
     });
 
-    // Observa todas as seções, cards e estatísticas
     document.querySelectorAll('section, .card, .stat-box, .ratings').forEach((el) => observer.observe(el));
     
-    // Counter animation para os números na seção de estatísticas
     const statNumbers = document.querySelectorAll('.stat-box span');
     
     const startCounters = function() {
@@ -48,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = parseInt(counter.textContent);
             const suffix = counter.textContent.match(/[+k]$/);
             let current = 0;
-            const increment = target / 60; // Velocidade da animação
+            const increment = target / 60;
             
             const updateCounter = function() {
                 if (current < target) {
@@ -64,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     
-    // Inicia os contadores quando a seção estiver visível
     const statsSection = document.querySelector('.escritorio-section');
     if (statsSection) {
         const statsObserver = new IntersectionObserver((entries) => {
@@ -90,7 +84,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
             
-            // Fecha o menu mobile se estiver aberto
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('.navbar-collapse');
             
@@ -119,7 +112,6 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Exemplo de validação simples
         const inputs = this.querySelectorAll('input, textarea');
         let isValid = true;
         
@@ -128,7 +120,6 @@ if (contactForm) {
                 isValid = false;
                 input.classList.add('is-invalid');
                 
-                // Adiciona mensagem de erro
                 const feedback = document.createElement('div');
                 feedback.className = 'invalid-feedback';
                 feedback.innerText = 'Este campo é obrigatório';
@@ -145,14 +136,12 @@ if (contactForm) {
         });
         
         if (isValid) {
-            // Aqui você pode adicionar a lógica para enviar o formulário
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...';
             
-            // Simulando o envio do formulário
             setTimeout(() => {
                 submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Mensagem enviada!';
                 
@@ -161,7 +150,6 @@ if (contactForm) {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                     
-                    // Mensagem de sucesso
                     const successAlert = document.createElement('div');
                     successAlert.className = 'alert alert-success mt-3';
                     successAlert.innerHTML = '<i class="fas fa-check-circle me-2"></i>Mensagem enviada com sucesso! Entraremos em contato em breve.';
@@ -176,4 +164,4 @@ if (contactForm) {
             }, 1500);
         }
     });
-} 
+}
