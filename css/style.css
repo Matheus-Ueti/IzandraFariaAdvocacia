@@ -387,6 +387,11 @@ footer a:hover {
         height: 80px;
         right: 0;
     }
+    
+    .navbar-logo {
+        margin-left: -20px !important;
+        max-height: 120px !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -415,6 +420,11 @@ footer a:hover {
     .experience-badge {
         bottom: 10px;
         right: 10px;
+    }
+    
+    .navbar-logo {
+        margin-left: 0 !important;
+        max-height: 80px !important;
     }
 }
 
