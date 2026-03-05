@@ -10,7 +10,7 @@ Landing page profissional para a Dra. Izandra, advogada especializada em Direito
 - Bootstrap 5
 - Font Awesome
 - Google Fonts
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaa
 ## 📋 Características
 
 - Design moderno e profissional
